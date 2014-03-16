@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SelectRows Plugin</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta content="en-US" http-equiv="Content-Language"/>
+
+    <link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css">
+
+    <style>
+        .selected {
+            background-color: #76A0D3;
+        }
+    </style>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <script type="text/javascript" src="scripts/selectRows.min.js"></script>
+</head>
+<body>
+<div class="content-wrapper fixed-height">
+    <div class="container">
+        <div class="module">
+            <table class="table table-fixed  table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>№</th>
+                        <th>Дата загрузки</th>
+                        <th>ФИО</th>
+                        <th>№ телефона</th>
+                        <th>Emile</th>
+                    </tr>
+                </thead>
+                <tbody id="contactsList">
+                    <tr>
+                        <td>
+                            <span>1</span>
+                        </td>
+                        <td>
+                            <span>2013-01-08</span>
+                        </td>
+                        <td>
+                            <span>test</span>
+                            <span>test</span>
+                            <span>test</span>
+                        </td>
+                        <td><span>3-111-222</span></td>
+                        <td><span>test@mail.com</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <span>2</span>
+                        </td>
+                        <td>
+                            <span>2013-10-27</span>
+                        </td>
+                        <td>
+                            <span>test4</span>
+                            <span>test4</span>
+                            <span>test4</span>
+                        </td>
+                        <td><span>8-888-999</span></td>
+                        <td><span>test4@mail.com</span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span>3</span>
+                        </td>
+                        <td>
+                            <span>2013-05-23</span>
+                        </td>
+                        <td>
+                            <span>test2</span>
+                            <span>test2</span>
+                            <span>test2</span>
+                        </td>
+                        <td><span>1-111-555</span></td>
+                        <td><span>test2@mail.com</span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span>5</span>
+                        </td>
+                        <td>
+                            <span>2013-02-20</span>
+                        </td>
+                        <td>
+                            <span>test3</span>
+                            <span>test3</span>
+                            <span>test3</span>
+                        </td>
+                        <td><span>3-122-111</span></td>
+                        <td><span>test3@mail.com</span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span>6</span>
+                        </td>
+                        <td>
+                            <span>2013-08-11</span>
+                        </td>
+                        <td>
+                            <span>test5</span>
+                            <span>test5</span>
+                            <span>test5</span>
+                        </td>
+                        <td><span>6-551-111</span></td>
+                        <td><span>test5@mail.com</span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span>7</span>
+                        </td>
+                        <td>
+                            <span>2013-11-02</span>
+                        </td>
+                        <td>
+                            <span>test6</span>
+                            <span>test6</span>
+                            <span>test6</span>
+                        </td>
+                        <td><span>8-999-888</span></td>
+                        <td><span>test6@mail.com</span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span>8</span>
+                        </td>
+                        <td>
+                            <span>2013-06-24</span>
+                        </td>
+                        <td>
+                            <span>test7</span>
+                            <span>test7</span>
+                            <span>test7</span>
+                        </td>
+                        <td><span>5-888-999</span></td>
+                        <td><span>test7@mail.com</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<script>
+    $(function() {
+        $('#contactsList').selectRows({class: 'success'});
+    });
+</script>
+</body>
+</html>
