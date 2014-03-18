@@ -5,7 +5,8 @@ jQuery plugin for rows selection in the grid. You can check an example here
 http://danilbaibak.github.io/select-rows/
 
 <h3>How to use:</h3>
-<code><p>$('#contactsList').selectRows({class: 'success'});</p></code>
+
+<b>$('#contactsList').selectRows({class: 'success'});</b>
 
 Markup should be done as simple table. "contactsList" - is an id of "table" or "tbody". You need to pass to the plugin the class name parameter that will be added to the selected row. By default the class name is "selectedRow".
 
