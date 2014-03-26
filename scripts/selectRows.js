@@ -36,15 +36,29 @@
         /**
          * Finish selecting rows, when user released the button
          */
-        pluginArea.delegate('tr', 'mouseup', function () {
+        pluginArea.delegate('tr', 'mouseup', function (e) {
             pluginArea.undelegate('tr', 'mouseover');
             pluginArea.unbind('mouseleave');
             pluginArea.undelegate('tr', 'mouseout');
+
+            /**
+             * Trigger event, that selection is started
+             */
+            if (!e.ctrlKey && !e.shiftKey) {
+                pluginArea.trigger({type: 'finishSelection', currentRow: this});
+            }
+
         });
 
         pluginArea.delegate('tr', 'mousedown', function (e) {
             e.preventDefault();
             currentRow = this;
+
+            /**
+             * Trigger event, that selection is started
+             */
+            pluginArea.trigger({type: 'startSelection', currentRow: currentRow});
+
 
             //Get the rows that were selected before
             selectedRows = $('.' + options.class);
@@ -78,6 +92,13 @@
              */
             pluginArea.on('mouseleave', function () {
                 pluginArea.undelegate('tr', 'mouseover');
+
+                /**
+                 * Trigger event, that selection is started
+                 */
+                pluginArea.trigger({type: 'finishSelection', currentRow: currentRow[0]});
+
+                pluginArea.unbind('mouseleave');
             });
 
             /**
@@ -94,7 +115,7 @@
              */
             pluginArea.delegate('tr', 'mouseover', function (e) {
                 newRow = $(this);
-                setTimeout(function() {
+                setTimeout(function () {
                     //check whether was pressed ctrl or shift
                     if (!e.ctrlKey && !e.shiftKey) {
                         /**
