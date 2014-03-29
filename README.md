@@ -1,4 +1,4 @@
-select-rows
+jQuery plugin for selecting rows
 ===========
 
 jQuery plugin for rows selection in the grid. You can check an example here
